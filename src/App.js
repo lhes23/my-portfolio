@@ -51,12 +51,9 @@ function App() {
       <Header />
       <Section />
       <div className="flex text-center align-middle p-10 bg-gradient-to-r from-cyan-500 to-blue-500">
-        {DUMMY_PROJECTS.map((project) => {
-          <div key={project.id}>
-            {console.log(project)}
-            <Card project={project} />;<div>hello world</div>
-          </div>;
-        })}
+        {DUMMY_PROJECTS.map((project) => (
+          <Card project={project} key={project.id} />
+        ))}
       </div>
     </>
   );
