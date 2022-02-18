@@ -5,6 +5,27 @@ import Section from "./components/Section";
 import Header from "./components/Header";
 import Card from "./components/Card";
 
+const DUMMY_PROJECTS = [
+  {
+    id: "p1",
+    title: "Project1",
+    description: "Project1 Description",
+    img: "",
+  },
+  {
+    id: "p2",
+    title: "Project2",
+    description: "Project2 Description",
+    img: "",
+  },
+  {
+    id: "p3",
+    title: "Project3",
+    description: "Project3 Description",
+    img: "",
+  },
+];
+
 const containerVariants = {
   initial: {
     opacity: 0,
@@ -29,10 +50,13 @@ function App() {
     <>
       <Header />
       <Section />
-      <div className="flex text-center align-middle p-10">
-        <Card />
-        <Card />
-        <Card />
+      <div className="flex text-center align-middle p-10 bg-gradient-to-r from-cyan-500 to-blue-500">
+        {DUMMY_PROJECTS.map((project) => {
+          <div key={project.id}>
+            {console.log(project)}
+            <Card project={project} />;<div>hello world</div>
+          </div>;
+        })}
       </div>
     </>
   );
