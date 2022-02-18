@@ -1,6 +1,7 @@
 import logo from "./lr-logo.svg";
 import "./App.css";
 import { motion } from "framer-motion";
+import Section from "./components/Section";
 
 const containerVariants = {
   initial: {
@@ -23,17 +24,20 @@ const containerVariants = {
 
 function App() {
   return (
-    <motion.div className="flex justify-center align-middle border h-screen">
-      <motion.h1
-        className="text-5xl font-bold underline m-10 align-middle border-8 h-20"
-        variants={containerVariants}
-        initial="initial"
-        animate="animate"
-        whileHover="hover"
-      >
-        Hi My Name is Lester
-      </motion.h1>
-    </motion.div>
+    <>
+      {/* <motion.div className="flex justify-center align-middle border">
+        <motion.h1
+          className="text-5xl font-bold underline m-10 align-middle border-8 h-20"
+          variants={containerVariants}
+          initial="initial"
+          animate="animate"
+          whileHover="hover"
+        >
+          Hi My Name is Lester
+        </motion.h1>
+      </motion.div> */}
+      <Section />
+    </>
   );
 }
 
