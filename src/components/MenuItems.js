@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { AiOutlineCloseCircle } from "react-icons/ai";
+import ResponsiveMenu from "./ResponsiveMenu";
 
 const MenuItems = () => {
   const [showResponsiveMenu, setShowResponsiveMenu] = useState(false);
-
+  const showMenu = () => {
+    setShowResponsiveMenu(!showResponsiveMenu);
+  };
   return (
     <>
       <ul className="hidden md:flex gap-8 p-6 uppercase">
@@ -12,29 +14,13 @@ const MenuItems = () => {
         <li>About</li>
         <li>Contact</li>
       </ul>
-      <div className="visible md:invisible absolute border">
-        <GiHamburgerMenu
-          onClick={() => {
-            setShowResponsiveMenu(!showResponsiveMenu);
-          }}
-        />
+      <div className="absolute right-6 scale-150 md:hidden">
+        <GiHamburgerMenu onClick={showMenu} className="scale-150" />
       </div>
-      <ul
-        className={
-          showResponsiveMenu
-            ? "flex-col flex items-center fixed inset-0 left-1/4 bg-black/40 backdrop-blur-lg justify-center gap-3"
-            : "hidden"
-        }
-      >
-        <AiOutlineCloseCircle
-          onClick={() => {
-            setShowResponsiveMenu(!showResponsiveMenu);
-          }}
-        />
-        <li>Home</li>
-        <li>About</li>
-        <li>Contact</li>
-      </ul>
+      <ResponsiveMenu
+        showResponsiveMenu={showResponsiveMenu}
+        showMenu={showMenu}
+      />
     </>
   );
 };
