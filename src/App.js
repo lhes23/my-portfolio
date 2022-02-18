@@ -2,6 +2,7 @@ import logo from "./lr-logo.svg";
 import "./App.css";
 import { motion } from "framer-motion";
 import Section from "./components/Section";
+import Header from "./components/Header";
 
 const containerVariants = {
   initial: {
@@ -36,6 +37,7 @@ function App() {
           Hi My Name is Lester
         </motion.h1>
       </motion.div> */}
+      <Header />
       <Section />
     </>
   );
