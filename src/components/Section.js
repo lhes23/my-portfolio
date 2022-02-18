@@ -6,8 +6,8 @@ const Section = () => {
     <div className=" bg-hero-image bg-cover bg-center w-full h-screen flex items-center px-4">
       <motion.div
         className="backdrop-blur uppercase text-center font-extrabold text-white p-10"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
+        initial={{ opacity: 0, x: "-100vw" }}
+        animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 2 }}
       >
         <h1 className="text-6xl drop-shadow-sm">Lester Reandino</h1>
