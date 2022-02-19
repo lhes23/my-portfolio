@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const Card = ({ project }) => {
   return (
-    <motion.div className="max-w-sm rounded-xl overflow-hidden shadow-2xl p-4 m-2 bg-white">
+    <motion.div className="flex max-w-sm rounded-xl overflow-hidden shadow-2xl p-4 m-2 bg-white">
       <img
         className="w-full"
         src="/img/card-top.jpg"

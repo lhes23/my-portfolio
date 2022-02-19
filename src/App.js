@@ -50,7 +50,7 @@ function App() {
     <>
       <Header />
       <Section />
-      <div className="flex text-center align-middle p-10 bg-gradient-to-r from-cyan-500 to-blue-500">
+      <div className="flex text-center align-middle p-10 bg-gradient-to-r from-cyan-500 to-blue-500 justify-center">
         {DUMMY_PROJECTS.map((project) => (
           <Card project={project} key={project.id} />
         ))}

@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 
 const Section = () => {
   return (
-    <div className="bg-hero-image bg-cover bg-center w-full h-screen flex items-center px-4">
+    <div className="bg-hero-image bg-cover bg-center bg-fixed w-full h-screen flex items-center px-4">
       <motion.div
-        className="bg-gradient-to-r from-cyan-500 to-blue-500 backdrop-blur uppercase text-center font-extrabold text-white p-10"
+        className="backdrop-blur uppercase text-center font-extrabold text-white p-10"
         initial={{ opacity: 0, x: "-100vw" }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 2 }}
