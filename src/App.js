@@ -1,4 +1,3 @@
-import logo from "./lr-logo.svg";
 import "./App.css";
 import { motion } from "framer-motion";
 import Section from "./components/Section";
